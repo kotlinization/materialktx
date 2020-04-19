@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.kotlinizer"
-version = "0.0.1-alpha8"
+version = "0.0.1"
 
 allprojects {
     repositories {
