@@ -1,7 +1,7 @@
-package org.kotlinizer.materialktx.components
+package com.github.kotlinizer.materialktx.components
 
 import kotlinx.html.*
-import org.kotlinizer.materialktx.AttributesBoolean
+import com.github.kotlinizer.materialktx.AttributesBoolean
 
 
 open class MwcDrawerTag(

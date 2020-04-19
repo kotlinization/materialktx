@@ -3,8 +3,8 @@ plugins {
     `maven-publish`
 }
 
-group = "org.kotlinizer"
-version = "0.0.1-alpha2"
+group = "com.github.kotlinizer"
+version = "0.0.1-alpha3"
 
 repositories {
     mavenCentral()

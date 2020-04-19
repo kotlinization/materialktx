@@ -1,4 +1,4 @@
-package org.kotlinizer.materialktx.components
+package com.github.kotlinizer.materialktx.components
 
 import kotlinx.html.*
 

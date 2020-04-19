@@ -1,4 +1,4 @@
-package org.kotlinizer.materialktx
+package com.github.kotlinizer.materialktx
 
 import kotlinx.html.CommonAttributeGroupFacade
 
