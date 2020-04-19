@@ -20,5 +20,5 @@ inline fun MwcListTag.mwcListItem(
 ) = MwcListItemTag(emptyMap, consumer).visit(block)
 
 @JsNonModule
-@JsModule("@material/mwc-list-item")
+@JsModule("@material/mwc-list/mwc-list-item")
 private external interface ImportListItem

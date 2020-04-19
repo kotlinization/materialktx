@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "org.kotlinizer"
-version = "0.0.1-alpha1"
+version = "0.0.1-alpha2"
 
 repositories {
     mavenCentral()
@@ -22,7 +22,7 @@ dependencies {
     implementation(npm("@material/mwc-icon-button", mwcVersion))
     implementation(npm("@material/mwc-list", mwcVersion))
     //This npm doesn't really exists, create copy from mwc-list and change main
-    implementation(npm("@material/mwc-list-item", mwcVersion))
+//    implementation(npm("@material/mwc-list-item", mwcVersion))
     implementation(npm("@material/mwc-top-app-bar", mwcVersion))
 }
 
