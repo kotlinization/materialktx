@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.kotlinizer"
-version = "0.0.1-alpha4"
+version = "0.0.1-alpha5"
 
 repositories {
     mavenCentral()
@@ -21,8 +21,6 @@ dependencies {
     implementation(npm("@material/mwc-drawer", mwcVersion))
     implementation(npm("@material/mwc-icon-button", mwcVersion))
     implementation(npm("@material/mwc-list", mwcVersion))
-    //This npm doesn't really exists, create copy from mwc-list and change main
-//    implementation(npm("@material/mwc-list-item", mwcVersion))
     implementation(npm("@material/mwc-top-app-bar", mwcVersion))
 }
 
@@ -32,6 +30,9 @@ publishing {
     publications {
         val tmpVersion = version
         create(project.name, MavenPublication::class) {
+            pom {
+                this.packaging = "jar"
+            }
             artifactId = project.name
             version = tmpVersion.toString()
             artifact(tasks.JsSourcesJar.get())
