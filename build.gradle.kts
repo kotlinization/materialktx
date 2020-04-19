@@ -6,9 +6,11 @@ plugins {
 group = "com.github.kotlinizer"
 version = "0.0.1-alpha8"
 
-repositories {
-    mavenCentral()
-    jcenter()
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
 }
 
 val mwcVersion = "v0.14.1"
