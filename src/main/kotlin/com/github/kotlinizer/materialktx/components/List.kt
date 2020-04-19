@@ -18,6 +18,8 @@ class MwcListTag(
 ), HtmlBlockTag, ImportList {
 
     var activatable: Boolean by AttributesBoolean()
+
+    var multi: Boolean by AttributesBoolean()
 }
 
 @HtmlTagMarker
