@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.kotlinizer"
-version = "0.0.1-alpha3"
+version = "0.0.1-alpha4"
 
 repositories {
     mavenCentral()
@@ -27,3 +27,14 @@ dependencies {
 }
 
 kotlin.target.browser { }
+
+publishing {
+    publications {
+        val tmpVersion = version
+        create(project.name, MavenPublication::class) {
+            artifactId = project.name
+            version = tmpVersion.toString()
+            artifact(tasks.JsSourcesJar.get())
+        }
+    }
+}
