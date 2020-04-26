@@ -22,6 +22,7 @@ dependencies {
     implementation(npm("@material/mwc-button", mwcVersion))
     implementation(npm("@material/mwc-drawer", mwcVersion))
     implementation(npm("@material/mwc-icon-button", mwcVersion))
+    implementation(npm("@material/mwc-icon", mwcVersion))
     implementation(npm("@material/mwc-list", mwcVersion))
     implementation(npm("@material/mwc-top-app-bar", mwcVersion))
 }

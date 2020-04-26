@@ -1,7 +1,10 @@
-import com.github.kotlinizer.materialktx.components.mwcButton
-import com.github.kotlinizer.materialktx.components.mwcList
-import com.github.kotlinizer.materialktx.components.mwcListItem
+import com.github.kotlinizer.materialktx.components.*
+import com.github.kotlinizer.materialktx.components.MwcListItemTag.Companion.GRAPHIC_AVATAR
+import com.github.kotlinizer.materialktx.components.MwcListItemTag.Companion.GRAPHIC_ICON
+import com.github.kotlinizer.materialktx.components.MwcListItemTag.Companion.GRAPHIC_LARGE
+import com.github.kotlinizer.materialktx.components.MwcListItemTag.Companion.GRAPHIC_MEDIUM
 import kotlinx.html.dom.create
+import kotlinx.html.id
 import kotlinx.html.js.div
 import kotlinx.html.p
 import kotlinx.html.style
@@ -21,29 +24,66 @@ fun main() {
 }
 
 fun addList() = document.create.div {
-    p {
-        mwcList {
-            repeat(4) {
-                mwcListItem { text("Item $it") }
+    style {
+        +"""
+            #custom  mwc-icon{
+                background-color: black;
+                color: white;
+            }
+        """.trimIndent()
+    }
+    mwcList {
+        repeat(4) {
+            mwcListItem("Item $it")
+        }
+    }
+    mwcList {
+        activatable = true
+        repeat(4) {
+            mwcListItem("Item $it") {
+                if (it == 1) {
+                    selected = true
+                    activated = true
+                }
             }
         }
     }
-    p {
-        mwcList {
-            activatable = true
-            repeat(4) {
-                mwcListItem { text("Item $it") }
+    mwcList {
+        activatable = true
+        multi = true
+        repeat(4) {
+            mwcListItem("Item $it") {
+                if (it == 1 || it == 3) {
+                    selected = true
+                    activated = true
+                }
             }
         }
     }
-    p {
-        mwcList {
-            activatable = true
-            multi = true
-            repeat(4) {
-                mwcListItem { text("Item $it") }
-            }
-        }
+    mwcList {
+        id = "custom"
+        mwcListItemGraphic(GRAPHIC_AVATAR, "Avatar graphic", "folder")
+        mwcListItemGraphic(GRAPHIC_ICON, "Icon graphic", "folder")
+        mwcListItemGraphic(GRAPHIC_MEDIUM, "Medium graphic", "folder")
+        mwcListItemGraphic(GRAPHIC_LARGE, "Large graphic", "folder")
+
+    }
+    mwcList {
+        mwcListItemMeta("Location A", "info")
+        mwcListItemMeta("Location B", "info")
+        mwcListItemMeta("Location C", "info")
+        mwcListItemMeta("Location D", "info")
+    }
+    mwcList {
+        mwcListItemTwoLine("Item 0", "secondary line")
+        mwcListItemTwoLine("Item 1", "secondary line")
+        mwcListItemTwoLine("Item 2", "secondary line")
+        mwcListItemTwoLine("Item 3", "secondary line")
+    }
+    mwcList {
+        mwcListItem("Item 0")
+        mwcDivider()
+        mwcListItem("Item 1")
     }
 }
 
