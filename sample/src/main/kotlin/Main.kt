@@ -84,9 +84,52 @@ fun addList() = document.create.div {
         mwcListItem("Item 0")
         mwcDivider()
         mwcListItem("Item 1")
+        mwcDivider()
+        mwcListItem("Item 2")
+        mwcDivider()
+        mwcListItem("Item 3")
+        mwcDivider()
+        mwcListItemGraphic(GRAPHIC_AVATAR, "avatar item", "folder")
+        id = "custom"
+        mwcDivider {
+            inset = true
+            padded = true
+        }
+        mwcListItemGraphic(GRAPHIC_AVATAR, "avatar item", "folder")
     }
-}
+    mwcList {
+        multi = true
+        mwcCheckListItem("Item 0")
+        mwcCheckListItem("Item 1")
+        mwcDivider { }
+        mwcCheckListItem("Item 2") {
+            left = true
+        }
+        mwcCheckListItem("Item 3") {
+            left = true
+        }
+    }
+    mwcList {
+        mwcRadioListItem("Item 0") {
+            group = "a"
+        }
+        mwcRadioListItem("Item 1") {
+            group = "a"
+        }
+        mwcDivider { }
+        mwcRadioListItem("Item 2") {
+            left = true
+            group = "a"
+        }
+        mwcRadioListItem("Item 3") {
+            left = true
+            group = "a"
 
+
+        }
+    }
+
+}
 
 fun addButtons(): Element {
     val margin = "margin: 8px"

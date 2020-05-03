@@ -1,5 +1,6 @@
 package com.github.kotlinizer.materialktx.components
 
+import com.github.kotlinizer.materialktx.AttributesBoolean
 import kotlinx.html.*
 
 class MwcDividerTag(
@@ -15,7 +16,11 @@ class MwcDividerTag(
     namespace = null,
     inlineTag = false,
     emptyTag = false
-), HtmlBlockTag
+), HtmlBlockTag {
+    var inset: Boolean by AttributesBoolean()
+
+    var padded: Boolean by AttributesBoolean()
+}
 
 
 @HtmlTagMarker
